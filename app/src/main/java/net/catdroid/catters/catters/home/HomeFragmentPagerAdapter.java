@@ -24,10 +24,8 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
             case 0:
                 return new StaticListViewFragment();
             case 1:
-                return new StaticListViewFragment();
-            case 2:
                 return new DynamicListViewFragment(CAT_APARTMENT);
-            case 3:
+            case 2:
                 return new DynamicListViewFragment(RT_IF_YOU_LIKE);
         }
         return null;
@@ -35,6 +33,6 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 4;
+        return 3;
     }
 }
