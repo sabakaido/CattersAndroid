@@ -1,11 +1,8 @@
-package net.catdroid.catters.catters.home;
+package net.catdroid.catters.fragments;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
-import net.catdroid.catters.catters.home.dynamicview.DynamicListViewFragment;
-import net.catdroid.catters.catters.home.staticview.StaticListViewFragment;
 
 /**
  * Created by anikaido on 2016/03/06.
@@ -22,17 +19,13 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new StaticListViewFragment();
-            case 1:
-                return new DynamicListViewFragment(CAT_APARTMENT);
-            case 2:
-                return new DynamicListViewFragment(RT_IF_YOU_LIKE);
+                return new HomeFragment(CAT_APARTMENT);
         }
         return null;
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 1;
     }
 }

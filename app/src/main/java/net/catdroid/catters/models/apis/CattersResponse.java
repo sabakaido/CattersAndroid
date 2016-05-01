@@ -1,4 +1,4 @@
-package net.catdroid.catters.catters.home.dynamicview.model;
+package net.catdroid.catters.models.apis;
 
 /**
  * Created by anikaido on 2016/03/06.

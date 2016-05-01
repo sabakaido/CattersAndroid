@@ -1,4 +1,4 @@
-package net.catdroid.catters.catters.home.dynamicview;
+package net.catdroid.catters.managers;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 
 import net.catdroid.catters.catters.R;
-import net.catdroid.catters.catters.home.dynamicview.model.CatImage;
+import net.catdroid.catters.models.home.CatImage;
 
 import java.util.List;
 

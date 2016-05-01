@@ -1,4 +1,4 @@
-package net.catdroid.catters.catters.home.staticview.model;
+package net.catdroid.catters.models.home;
 
 /**
  * Created by anikaido on 2016/03/05.

@@ -1,7 +1,7 @@
-package net.catdroid.catters.catters.home.dynamicview.model;
+package net.catdroid.catters.models.home;
 
 /**
- * Created by anikaido on 2016/03/06.
+ * Created by anikaido on 2016/04/30.
  */
 public class CatImage {
     private String id;

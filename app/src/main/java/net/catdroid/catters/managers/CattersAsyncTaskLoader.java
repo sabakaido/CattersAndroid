@@ -1,4 +1,4 @@
-package net.catdroid.catters.catters.home.dynamicview;
+package net.catdroid.catters.managers;
 
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
@@ -7,7 +7,7 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
-import net.catdroid.catters.catters.home.dynamicview.model.CatImage;
+import net.catdroid.catters.models.home.CatImage;
 
 import org.json.JSONArray;
 import org.json.JSONException;

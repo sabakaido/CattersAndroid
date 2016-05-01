@@ -1,4 +1,4 @@
-package net.catdroid.catters.catters.home.dynamicview;
+package net.catdroid.catters.fragments;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -10,28 +10,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.GridView;
 import android.widget.Toast;
 
 import net.catdroid.catters.catters.R;
-import net.catdroid.catters.catters.home.dynamicview.model.CatImage;
-import net.catdroid.catters.catters.home.staticview.model.ListItem;
-import net.catdroid.catters.catters.home.staticview.ListviewArrayAdapter;
+import net.catdroid.catters.managers.CatImageArrayAdapter;
+import net.catdroid.catters.managers.CattersAsyncTaskLoader;
+import net.catdroid.catters.models.home.CatImage;
+import net.catdroid.catters.models.home.ListItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by anikaido on 2016/03/06.
+ * Created by anikaido on 2016/04/30.
  */
-public class DynamicListViewFragment extends Fragment implements LoaderManager.LoaderCallbacks<List<CatImage>> {
+public class HomeFragment extends Fragment implements LoaderManager.LoaderCallbacks<List<CatImage>> {
     private String requestUrl;
     private ProgressDialog progressDialog;
-    private ListView lv;
+    private GridView lv;
     private View view;
     private static final int LOADER_ID = 0;
 
-    public DynamicListViewFragment(String requestUrl) {
+    public HomeFragment(String requestUrl) {
         this.requestUrl = requestUrl;
     }
 
@@ -40,17 +41,6 @@ public class DynamicListViewFragment extends Fragment implements LoaderManager.L
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.home_listview, null);
         List<ListItem> list = new ArrayList<ListItem>();
-
-        for (int i = 0; i < 10; i++) {
-            ListItem item = new ListItem();
-            item.setImageId(R.drawable.cat);
-            list.add(item);
-        }
-
-        ListviewArrayAdapter adapter = new ListviewArrayAdapter(getActivity(), R.layout.cat_list_item, list);
-
-        lv = (ListView) view.findViewById(R.id.cat);
-        lv.setAdapter(adapter);
 
         return view;
     }
@@ -80,7 +70,7 @@ public class DynamicListViewFragment extends Fragment implements LoaderManager.L
         progressDialog.hide();
         CatImageArrayAdapter adapter = new CatImageArrayAdapter(getActivity(), R.layout.cat_list_item, catImageList);
 
-        lv = (ListView) view.findViewById(R.id.cat);
+        lv = (GridView) view.findViewById(R.id.cat);
         lv.setAdapter(adapter);
 
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
