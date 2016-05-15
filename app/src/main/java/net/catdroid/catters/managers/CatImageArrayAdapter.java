@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
-import net.catdroid.catters.catters.R;
+import net.catdroid.catters.R;
 import net.catdroid.catters.models.home.CatImage;
 
 import java.util.List;
@@ -21,32 +21,29 @@ public class CatImageArrayAdapter extends ArrayAdapter<CatImage> {
     private int resource;
     private List<CatImage> listItems;
     private LayoutInflater inflater;
+    private Context context;
 
     public CatImageArrayAdapter(Context context, int resource, List<CatImage> listItems) {
         super(context, resource, listItems);
 
         this.resource = resource;
         this.listItems = listItems;
+        this.context = context;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view;
-        if (convertView != null) {
-            view = convertView;
-        } else {
-            view = this.inflater.inflate(this.resource, null);
+        if (convertView == null) {
+            convertView = inflater.inflate(this.resource, parent, false).findViewById(R.id.cat_image);
         }
 
-        CatImage catImage = this.listItems.get(position);
+        String url = listItems.get(position).getImageUrl();
 
-        ImageView imageView = (ImageView)view.findViewById(R.id.cat_image);
+        Picasso.with(context)
+                .load(url)
+                .into((ImageView) convertView);
 
-        Picasso.with(getContext())
-                .load(catImage.getImageUrl())
-                .into(imageView);
-
-        return view;
+        return convertView;
     }
 }

@@ -7,17 +7,9 @@
             android:icon="@android:drawable/ic_menu_gallery"
             android:title="ホーム" />
         <item
-            android:icon="@android:drawable/ic_menu_gallery"
-            android:title="視聴履歴" />
-        <item
-            android:icon="@android:drawable/ic_menu_gallery"
-            android:title="ブックマーク" />
-        <item
+            android:id="@+id/menu_mypage"
             android:icon="@android:drawable/ic_menu_gallery"
             android:title="マイページ" />
-        <item
-            android:icon="@android:drawable/ic_menu_gallery"
-            android:title="検索" />
     </group>
     <item
         android:title="その他">

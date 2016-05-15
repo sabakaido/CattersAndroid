@@ -19,13 +19,26 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new HomeFragment(CAT_APARTMENT);
+                return new HomeFragment();
+            case 1:
+                return new HomeFragment();
         }
         return null;
     }
 
     @Override
     public int getCount() {
-        return 1;
+        return 2;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        switch (position) {
+            case 0:
+                return "投稿した画像";
+            case 1:
+                return "お気に入り";
+        }
+        return null;
     }
 }
