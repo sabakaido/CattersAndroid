@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <fr.castorflex.android.circularprogressbar.CircularProgressBar
+        android:id="@+id/progressBarMain"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        app:cpb_color="@color/colorProgress"
+        app:cpb_max_sweep_angle="300"
+        app:cpb_min_sweep_angle="10"
+        app:cpb_rotation_speed="1.0"
+        app:cpb_stroke_width="4dp"
+        app:cpb_sweep_speed="1.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCatError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/err_message_request_cat" />
+
+        <Button
+            android:id="@+id/buttonCatRequestAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/selector_round_primary_bg"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="Reload"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

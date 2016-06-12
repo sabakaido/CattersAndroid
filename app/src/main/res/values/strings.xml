@@ -3,4 +3,15 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="imageview_transision_name">imageview_transition</string>
+    <string name="err_message_request_cat">Sorry...failed to collect sweet cats.</string>
+    <string name="network_error">Check your network settings.</string>
+    <string name="favorite_empty">There is no favorite.</string>
+    <string name="cat_list">Cats</string>
+    <string name="favorite_list">Favorites</string>
+
+    <string name="additional_read_cat">reading additional cats.</string>
+
+    <string name="large_text">
+        "hogehoge"
+    </string>
 </resources>

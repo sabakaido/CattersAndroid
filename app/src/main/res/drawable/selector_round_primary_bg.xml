@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_round_primary_on" android:state_enabled="true" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/bg_round_primary_off" android:state_enabled="true" android:state_pressed="false"></item>
+    <item android:drawable="@drawable/bg_round_disable" android:state_enabled="false" android:state_pressed="false"></item>
+</selector>

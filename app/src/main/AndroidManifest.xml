@@ -5,21 +5,24 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name=".CatApplication"
         android:allowBackup="true"
         android:icon="@drawable/cat"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="net.catdroid.catters.views.HomeActivity"
-                  android:screenOrientation="portrait">
+        <activity android:name=".ui.activity.CatGridListActivity"
+                  android:label="Cat Collection"
+                  android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="net.catdroid.catters.views.MyPageActivity"
-                  android:screenOrientation="portrait">
+        <activity android:name=".ui.activity.CatDetailActivity"
+                  android:label="ScrollingActivity"
+                  android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

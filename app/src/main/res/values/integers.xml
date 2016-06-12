@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="cat_request_connect_timeout">5</integer>
+    <integer name="cat_request_read_timeout">5</integer>
+    <integer name="cat_grid_columns">2</integer>
+</resources>
